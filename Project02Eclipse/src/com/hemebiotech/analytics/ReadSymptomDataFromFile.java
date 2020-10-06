@@ -6,42 +6,31 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Simple brute force implementation
- *
- */
-public class ReadSymptomDataFromFile implements ISymptomReader {
 
-	private String filepath;
+public class ReadSymptomDataFromFile  {
 	
-	/**
-	 * 
-	 * @param filepath a full or partial path to file with symptom strings in it, one per line
-	 */
-	public ReadSymptomDataFromFile (String filepath) {
-		this.filepath = filepath;
-	}
+  public List<String> GetSymptoms(String path) throws IOException {
+  
+          List <String> symptoms = new ArrayList<>();
 	
-	@Override
-	public List<String> GetSymptoms() {
-		ArrayList<String> result = new ArrayList<String>();
+	        	 
+		// first get input
+          
+          // creating a reader object (BufferedReader)/ Buffering the symptoms.txt file
+	        	 
+		BufferedReader reader = new BufferedReader (new FileReader(path));
+		String line = reader.readLine(); //reading line by line
 		
-		if (filepath != null) {
-			try {
-				BufferedReader reader = new BufferedReader (new FileReader(filepath));
-				String line = reader.readLine();
-				
-				while (line != null) {
-					result.add(line);
-					line = reader.readLine();
-				}
-				reader.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+		//Loop while- reading symptoms /storing values in memory
+		while (line != null) {
+			
+			symptoms.add(line);
+
+			line = reader.readLine();	// get another symptom
 		}
 		
-		return result;
+		reader.close();
+		return symptoms;
 	}
 
 }

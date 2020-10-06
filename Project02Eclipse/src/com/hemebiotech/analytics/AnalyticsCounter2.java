@@ -1,38 +1,33 @@
 package com.hemebiotech.analytics;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
+      
+import java.io.IOException;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.TreeMap;
 
+ 
 public class AnalyticsCounter2 {
-	private static Map<String,Integer> counter = new TreeMap<>();
+		
+	
+	/**
+	 * This class is the main that call all the methods
+	 * @param args
+	 * @throws Exception
+	 */
 	
 	public static void main(String args[]) throws Exception {
-		// first get input
-		BufferedReader reader = new BufferedReader (new FileReader("Project02Eclipse/symptoms.txt"));
-		String line = reader.readLine();
-
-		while (line != null) {
-			System.out.println("symptom from file: " + line);
-			Integer count = counter.get(line);
-			if(count==null) {
-				counter.put(line, 1);
-			}else {
-				Integer newCount = counter.get(line)+1;
-				counter.put(line, newCount);
-			}
-
-			line = reader.readLine();	// get another symptom
+	
+		
+		
+		 WriteSymptomDataToFile writer = new WriteSymptomDataToFile();
+		
+		 
+		try {
+		writer.WriteSymptoms(); // Ecriture des symptômes dans le fichier result.out
+		System.out.println("Tout s'est bien passé!");
 		}
-		reader.close();
-		// next generate output
-		FileWriter writer = new FileWriter ("result.out");
-		for(Entry<String, Integer> count: counter.entrySet()) {
-			writer.write( count.getKey() +":"+ count.getValue() + "\n");
+		catch (IOException e) {
+			System.out.println("Une erreur est survenue !");
 		}
-		writer.close();
+		
 	}
 }
