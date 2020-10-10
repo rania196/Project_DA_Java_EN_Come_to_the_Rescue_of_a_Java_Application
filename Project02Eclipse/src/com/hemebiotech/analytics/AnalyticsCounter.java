@@ -1,11 +1,9 @@
 package com.hemebiotech.analytics;
       
 import java.io.IOException;
-import java.util.List;
-import java.util.Map;
 
  
-public class AnalyticsCounter2 {
+public class AnalyticsCounter {
 		
 	
 	/**
@@ -13,7 +11,6 @@ public class AnalyticsCounter2 {
 	 * @param args
 	 * @throws Exception
 	 */
-	
 	public static void main(String args[]) throws Exception {
 	
 		

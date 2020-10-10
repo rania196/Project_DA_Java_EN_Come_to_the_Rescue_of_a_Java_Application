@@ -4,8 +4,16 @@ import java.io.IOException;
 import java.util.List;
 import java.util.TreeMap;
 
+/**
+ * @author rania
+ *
+ */
 public class Counting {
  
+	/**
+	 * @return
+	 * @throws IOException
+	 */
 	public TreeMap<String,Integer> count() throws IOException{
 		ReadSymptomDataFromFile reader = new ReadSymptomDataFromFile();
 		List <String> symptoms = reader.GetSymptoms ("Project02Eclipse/symptoms.txt"); //Lecture des symptômes depuis le fichier

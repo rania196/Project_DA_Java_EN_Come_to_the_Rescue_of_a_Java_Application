@@ -7,9 +7,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class ReadSymptomDataFromFile  {
+/**
+ * @author rania
+ *
+ */
+public class ReadSymptomDataFromFile implements ISymptomReader {
 	
-  public List<String> GetSymptoms(String path) throws IOException {
+  /**
+   * this method is for reading the file
+   * @param path
+   * @return
+   * @throws IOException
+   */
+public List<String> GetSymptoms(String path) throws IOException {
   
           List <String> symptoms = new ArrayList<>();
 	

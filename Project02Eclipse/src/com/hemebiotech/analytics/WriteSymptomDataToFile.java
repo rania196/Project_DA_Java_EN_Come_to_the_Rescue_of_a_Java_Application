@@ -11,8 +11,9 @@ import java.util.Map.Entry;
  */
 public class WriteSymptomDataToFile {
 	
-	//generate output
+	
 	/**
+	 * generate output
 	 * @param symptoms
 	 * @throws IOException
 	 */
