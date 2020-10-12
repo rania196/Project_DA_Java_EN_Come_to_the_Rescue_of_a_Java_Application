@@ -3,11 +3,15 @@ package com.hemebiotech.analytics;
 import java.io.IOException;
 
  
+/**
+ * This class is the main that call all the methods
+ * @author rania
+ *
+ */
 public class AnalyticsCounter {
 		
 	
 	/**
-	 * This class is the main that call all the methods
 	 * @param args
 	 * @throws Exception
 	 */
@@ -18,11 +22,11 @@ public class AnalyticsCounter {
 		 WriteSymptomDataToFile writer = new WriteSymptomDataToFile();
 		
 		 
-		try {
-		writer.WriteSymptoms(); // Ecriture des symptômes dans le fichier result.out
+		try { // try this if everything is good
+		writer.WriteSymptoms(); // call the method that write symptoms in the file result.out
 		System.out.println("Tout s'est bien passé!");
 		}
-		catch (IOException e) {
+		catch (IOException e) { 
 			System.out.println("Une erreur est survenue !");
 		}
 		

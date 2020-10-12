@@ -13,18 +13,19 @@ public class WriteSymptomDataToFile {
 	
 	
 	/**
+	 * this method write symptoms in the file result.out, also for calls the method that is already created for the count
 	 * generate output
 	 * @param symptoms
 	 * @throws IOException
 	 */
 	public void WriteSymptoms() throws IOException {
 		Counting counter = new Counting();
-		Map<String,Integer> counters = counter.count();
-		FileWriter writer = new FileWriter ("result.out");
-		for(Entry<String, Integer> count: counters.entrySet()) {
-			writer.write( count.getKey() +":"+ count.getValue() + "\n");
+		Map<String,Integer> counters = counter.count();                     //call the method that count
+		FileWriter writer = new FileWriter ("result.out");                 // opening the file in writing
+		for(Entry<String, Integer> count: counters.entrySet()) {          // the method entrySet allows to convert the map into a list to be able to loop over it
+			writer.write( count.getKey() +":"+ count.getValue() + "\n"); //for each symptom write the name and the number of occurrences
 		}
-		writer.close();
+		writer.close();                                         // closing
 	}
 
 }

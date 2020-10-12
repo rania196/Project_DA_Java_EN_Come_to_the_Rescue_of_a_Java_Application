@@ -14,14 +14,14 @@ import java.util.List;
 public class ReadSymptomDataFromFile implements ISymptomReader {
 	
   /**
-   * this method is for reading the file
-   * @param path
-   * @return
+   * this method read a file
+   * @param path (the path to the file)
+   * @return a list of symptoms
    * @throws IOException
    */
-public List<String> GetSymptoms(String path) throws IOException {
+public List<String> GetSymptoms(String path) throws IOException { //an exception can be throws if there is any error to read or write the file
   
-          List <String> symptoms = new ArrayList<>();
+          List <String> symptoms = new ArrayList<>(); // creating a list to stock the symptoms
 	
 	        	 
 		// first get input
@@ -39,8 +39,8 @@ public List<String> GetSymptoms(String path) throws IOException {
 			line = reader.readLine();	// get another symptom
 		}
 		
-		reader.close();
-		return symptoms;
+		reader.close(); // closing the reader
+		return symptoms; // return list of the symptoms
 	}
 
 }

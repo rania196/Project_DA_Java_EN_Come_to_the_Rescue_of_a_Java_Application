@@ -6,9 +6,9 @@ import java.util.List;
 public interface ISymptomReader {
 
 	/**
-	 * Read a file and returns a list of symptoms
-	 * @param path
-	 * @return
+	 * Reads a file and returns a list of symptoms
+	 * @param path, the path to the file
+	 * @return a list of symptoms
 	 * @throws IOException
 	 */
 	List<String> GetSymptoms(String path) throws IOException;
