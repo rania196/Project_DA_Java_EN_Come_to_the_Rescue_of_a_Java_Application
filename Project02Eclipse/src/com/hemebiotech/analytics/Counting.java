@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.TreeMap;
 
 /**
+ * this class contain a method to count and sort the symptoms
  * @author rania
  *
  */

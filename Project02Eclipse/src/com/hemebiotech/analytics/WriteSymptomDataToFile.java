@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 /**
+ * this class contain a method that write the result on the file 
  * @author rania
  *
  */

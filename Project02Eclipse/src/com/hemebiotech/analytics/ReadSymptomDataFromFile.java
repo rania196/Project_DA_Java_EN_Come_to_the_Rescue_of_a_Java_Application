@@ -8,6 +8,7 @@ import java.util.List;
 
 
 /**
+ * this class contain a method to read the file
  * @author rania
  *
  */
@@ -19,6 +20,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
    * @return a list of symptoms
    * @throws IOException
    */
+	@Override
 public List<String> GetSymptoms(String path) throws IOException { //an exception can be throws if there is any error to read or write the file
   
           List <String> symptoms = new ArrayList<>(); // creating a list to stock the symptoms
