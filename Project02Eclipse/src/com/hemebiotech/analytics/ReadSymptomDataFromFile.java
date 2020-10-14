@@ -15,10 +15,10 @@ import java.util.List;
 public class ReadSymptomDataFromFile implements ISymptomReader {
 	
   /**
-   * this method read a file
+   * this method reads a file
    * @param path (the path to the file)
    * @return a list of symptoms
-   * @throws IOException
+   * @throws IOException Input or Output Exceptions
    */
 	@Override
 public List<String> GetSymptoms(String path) throws IOException { //an exception can be throws if there is any error to read or write the file

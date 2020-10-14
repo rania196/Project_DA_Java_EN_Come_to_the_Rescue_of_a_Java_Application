@@ -16,8 +16,7 @@ public class WriteSymptomDataToFile {
 	/**
 	 * this method write symptoms in the file result.out, also for calls the method that is already created for the count
 	 * generate output
-	 * @param symptoms
-	 * @throws IOException
+	 * @throws IOException Input or Output Exceptions
 	 */
 	public void WriteSymptoms() throws IOException {
 		Counting counter = new Counting();

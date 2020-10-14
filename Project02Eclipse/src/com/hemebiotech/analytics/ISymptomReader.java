@@ -9,7 +9,7 @@ public interface ISymptomReader {
 	 * Reads a file and returns a list of symptoms
 	 * @param path, the path to the file
 	 * @return a list of symptoms
-	 * @throws IOException
+	 * @throws IOException Input or Output Exceptions
 	 */
 	List<String> GetSymptoms(String path) throws IOException;
 }

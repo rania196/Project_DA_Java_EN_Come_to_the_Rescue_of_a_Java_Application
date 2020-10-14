@@ -14,7 +14,7 @@ public class Counting {
 	/**
 	 * This method call the method for reading the file, then count and return a TreeMap
 	 * @return a TreeMap because the data are sorted alphabetically in output
-	 * @throws IOException
+	 * @throws IOException Input or Output Exceptions
 	 */
 	public TreeMap<String,Integer> count() throws IOException{
 		
